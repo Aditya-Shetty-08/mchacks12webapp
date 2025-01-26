@@ -1,0 +1,88 @@
+/* Center the form and give it a modern card style */
+.patient-form-container {
+    padding: 20px;
+    max-width: 500px;
+    margin: 20px auto;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    background-color: #fff;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* Heading style */
+  .patient-form-container h2 {
+    text-align: center;
+    color: #5a0202;
+    margin-bottom: 20px;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Form fields styling */
+  .patient-form-container form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .patient-form-container label {
+    font-weight: bold;
+    margin-bottom: 5px;
+    font-size: 30px;
+    color: #333;
+  }
+  
+  .patient-form-container input,
+  .patient-form-container select {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 14px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  /* Button styling */
+  .patient-form-container button {
+    padding: 10px 20px;
+    background-color: #5a0202;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .patient-form-container button:hover {
+    background-color: #7a0b0b;
+  }
+  
+  /* Price section styling */
+  .patient-form-container .price {
+    font-size: 16px;
+    font-weight: bold;
+    color: #5a0202;
+    margin-bottom: 15px;
+    text-align: center;
+  }
+  
+  /* Adjust mobile responsiveness */
+  @media (max-width: 600px) {
+    .patient-form-container {
+      padding: 15px;
+    }
+  
+    .patient-form-container h2 {
+      font-size: 20px;
+    }
+  
+    .patient-form-container input,
+    .patient-form-container select {
+      font-size: 13px;
+    }
+  
+    .patient-form-container button {
+      font-size: 14px;
+    }
+  }
+  

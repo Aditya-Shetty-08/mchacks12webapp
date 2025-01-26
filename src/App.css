@@ -1,0 +1,157 @@
+mchacksapp/
+  public/
+    images/
+      img-1.jpg
+      img-2.jpg
+      img-8.jpg
+  src/
+    App.css
+
+* 
+
+{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'PT Sans', sans-serif;
+  }
+  
+  .home,
+  .products {
+    display: flex;
+    height: 90vh;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+  }
+
+  .services {
+    display: flex;
+    height: 30vh;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+  }
+  
+  .services {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: black;
+    font-size: 100px;
+  }
+
+  .book-room {
+    display: flex;
+    height: 30vh;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+  }
+
+  .h2-services {
+    font-size: 2rem;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+  }
+  
+  .contact-us {
+    background-position: center;
+    background-size: fill;
+    background-repeat: no-repeat;
+    color: black;
+    font-size: 100px;
+  }
+  
+  .contact-us-h2 {
+    background-position: center;
+    color:black;
+    font-size:80px;
+    padding-top: 70px;
+    padding-right: 100px;
+
+  }
+  .book-room {
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #fff;
+    font-size: 100px;
+  }
+
+  .contact-us-container {
+    text-align: center;
+    padding: 20px;
+    background-color: #f9f9f9;
+  }
+  
+  .contact-us-container h1 {
+    font-size: 3rem;
+    color: #b01e1e; /* Matches navbar color */
+  }
+  
+  .contact-info {
+    display: flex;
+    justify-content: space-around;
+    margin: 20px 0;
+  }
+  
+  .contact-info div {
+    text-align: left;
+  }
+  
+  .contact-info h2 {
+    color: #b01e1e;
+    font-size: 1.5rem;
+  }
+  
+  .contact-info p {
+    font-size: 1.2rem;
+  }
+  
+  .contact-form {
+    margin: 20px auto;
+    width: 50%;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+  .contact-form h2 {
+    font-size: 2rem;
+    color: #b01e1e;
+    margin-bottom: 10px;
+  }
+  
+  .contact-form input,
+  .contact-form textarea {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 10px;
+    font-size: 1rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+  }
+  
+  .contact-form button {
+    background-color: #b01e1e;
+    color: white;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .contact-form button:hover {
+    background-color: #8e1919;
+  }
+  
+  .hospital {
+    width:50px;
+    height:50px;
+    align-items: right;
+  }

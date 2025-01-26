@@ -1,0 +1,98 @@
+/* :root {
+    --primary: #800020;
+}
+
+.btn {
+    padding: 8px 20px;
+    border-radius: 2px;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+
+
+
+.btn--primary {
+    background-color: white;
+    color: red;
+    border: 1px solid var(--primary);
+}
+
+.btn--outline {
+    background-color: black;
+    color:white;
+    padding: 8px 20px;
+    border: 1px solid var(--primary);
+    transition: all 0.3s ease-out;
+}
+
+.btn--medium {
+    padding: 8px 20px;
+    font-size: 30px;
+}
+
+.btn--large {
+    padding: 12px 26px;
+    font-size: 30px;
+}
+
+.btn--medium:hover, .btn--large:hover {
+    background:white;
+    color:242424;
+    transition: all 0.3s ease-out;
+}
+ */
+
+
+ :root {
+    --primary: #800020; /* Primary color */
+    --text-black: #242424; /* Text black */
+}
+
+/* Base button styles */
+.btn {
+    padding: 8px 20px;
+    border-radius: 5px; /* Slightly rounded corners */
+    outline: none;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    text-decoration: none; /* Remove underline */
+    transition: all 0.3s ease-out;
+}
+
+/* Primary button */
+.btn--primary {
+    background-color: var(--primary); /* Use primary color */
+    color: white; /* White text */
+    border: 1px solid var(--primary); /* Solid border for better structure */
+}
+
+/* Outline button */
+.btn--outline {
+    background-color: black; /* Black background */
+    color: white; /* White text */
+    border: 1px solid var(--primary); /* Outline in primary color */
+}
+
+/* Medium button */
+.btn--medium {
+    padding: 8px 20px;
+    font-size: 18px; /* Adjusted for readability */
+}
+
+/* Large button */
+.btn--large {
+    padding: 12px 26px;
+    font-size: 22px; /* Adjusted for larger text */
+}
+
+/* Hover effect for medium and large buttons */
+.btn--medium:hover,
+.btn--large:hover {
+    background-color: white; /* Switch to white background */
+    color: var(--text-black); /* Text changes to black */
+    border: 1px solid var(--primary); /* Retain border color */
+    text-decoration: none; /* Ensure underline stays removed */
+    transition: all 0.3s ease-out;
+}

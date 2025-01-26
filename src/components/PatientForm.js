@@ -2,21 +2,30 @@ import React, { useState } from "react";
 import "./PatientForm.css";
 
 const PatientForm = () => {
-  const [distance, setDistance] = useState(0);
-  const [price, setPrice] = useState(0);
-
-  // Calculate price based on distance
-  const calculatePrice = (distance) => {
-    const basePrice = 100; // Base fee
-    const distanceRate = 5; // Cost per km
-    return basePrice + distance * distanceRate;
-  };
-
-  const handleDistanceChange = (e) => {
-    const newDistance = e.target.value;
-    setDistance(newDistance);
-    setPrice(calculatePrice(newDistance));
-  };
+    const [roomType, setRoomType] = useState("");
+    const [price, setPrice] = useState(0);
+  
+    // Calculate price based on room type
+    const calculatePrice = (roomType) => {
+      switch (roomType) {
+        case "smallSingle":
+          return 200; // Base price for Semi-Private Room
+        case "largeSingle":
+          return 300; // Base price for Private room
+        case "smallSharing":
+          return 150; // Base price for Sharing room
+        case "largeSharing":
+          return 100; // Base price for Ward
+        default:
+          return 0; // Default price
+      }
+    };
+  
+    const handleRoomTypeChange = (e) => {
+      const selectedRoomType = e.target.value;
+      setRoomType(selectedRoomType);
+      setPrice(calculatePrice(selectedRoomType));
+    };
 
   return (
     <div style={{ padding: "20px", maxWidth: "500px", margin: "auto" }}>
@@ -38,20 +47,26 @@ const PatientForm = () => {
 
         <div style={{ marginBottom: "10px" }}>
           <label>
-            Disease: 
+            Emergency:  
             <input type="text" name="disease" required style={{ marginLeft: "10px", padding: "5px" }} />
           </label>
         </div>
 
         <div style={{ marginBottom: "10px" }}>
           <label>
-            Distance (km): 
-            <input
-              type="number"
-              value={distance}
-              onChange={handleDistanceChange}
+          Room Type: 
+            <select
+              value={roomType}
+              onChange={handleRoomTypeChange}
+              required
               style={{ marginLeft: "10px", padding: "5px" }}
-            />
+            >
+              <option value="">Select Room Type</option>
+              <option value="smallSingle">Semi-Private Room</option>
+              <option value="largeSingle">Private Room</option>
+              <option value="smallSharing">Sharing Room</option>
+              <option value="largeSharing">Ward</option>
+            </select>
           </label>
         </div>
 
@@ -59,7 +74,6 @@ const PatientForm = () => {
           <label>
             Payment Option: 
             <select name="payment" required style={{ marginLeft: "10px", padding: "5px" }}>
-              <option value="cash">Cash</option>
               <option value="card">Credit/Debit Card</option>
               <option value="online">Online Transfer</option>
             </select>
